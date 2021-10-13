@@ -11,7 +11,7 @@ grades_dict = {'Wally': [87,96,70],
 grades = pd.DataFrame(grades_dict)
 grades.index = ['Test 1','Test 2', 'Test 3']
 print(grades)
-"""
+
 #each column is a series (1 dimensional)
 print(grades['Eva'])
 print(grades.Sam)
@@ -40,7 +40,6 @@ print(grades_B)
 
 gradesA_B = [(grades>= 90) | (grades>=80)]
 print(gradesA_B)
-"""
 
 pd.set_option('precision',2)
 print(grades.describe())
@@ -52,3 +51,5 @@ print(grades.sort_index(axis = 1, ascending = False))
 print(grades.sort_values(by='Test 1', axis = 1, ascending = False))
 
 print(grades.T.sort_values(by='Test 1', ascending=False))
+
+print(grades.loc['Test 1'].sort_values(ascending=False))
